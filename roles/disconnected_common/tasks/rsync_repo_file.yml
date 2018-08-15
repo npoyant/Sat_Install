@@ -1,0 +1,6 @@
+---
+- name: Rsync RHEL yum repo file
+  synchronize:
+    mode: pull
+    src: rsync://satrepo.example.com/var/www/html/pub/rhel.repo/
+    dest: /etc/yum.repos.d/

@@ -1,0 +1,15 @@
+---
+## Install basic / standard packages
+- name: installing packages
+  yum:
+    pkg={{ item }}
+    state=latest
+  with_items:
+   - bind-utils
+   - vim
+   - ansible
+   - openscap-scanner
+   - scap-security-guide
+   - aide
+   - python-passlib
+   - tmux

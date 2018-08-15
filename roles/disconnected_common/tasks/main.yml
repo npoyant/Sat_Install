@@ -1,0 +1,6 @@
+---
+- import_tasks: rsync_repo_file.yml
+- import_tasks: rsync_rhel_repo.yml
+- import_tasks: update_hosts_file.yml
+- import_tasks: install_standard_packages.yml
+- import_tasks: update_system.yml
