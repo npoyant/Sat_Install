@@ -1,0 +1,14 @@
+---
+- name: Ensure Repo Directory Exists
+  file:
+    path: /repo2
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+
+- name: Synchronization using rsync protocol (pull)
+  synchronize:
+    mode: pull
+    src: rsync://satrepo.example.com/var/www/html/pub/rhel-7-server-rpms/
+    dest: /repo2/
