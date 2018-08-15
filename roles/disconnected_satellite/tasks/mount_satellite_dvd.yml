@@ -1,0 +1,16 @@
+---
+- name: Ensure Satellite Mount Point Exists
+  file:
+    path: /mnt/sat
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+
+- name: Mount Satellite ISO read-only
+  mount:
+    path: /mnt/sat
+    src: /tmp/rhel-server-7.5-x86_64-dvd.iso
+    fstype: iso9660
+    opts: ro
+    state: present

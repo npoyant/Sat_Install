@@ -1,0 +1,10 @@
+---
+## Create Content View
+- name: Create Content View
+  command: /usr/bin/hammer --password "{{ vault_sat_admin_pwd }}" content-view create --name="{{content_view}}" --organization={{sat_org}}
+  ignore_errors: yes
+
+- name:  Add Repos to the Content View
+  command: /usr/bin/hammer --password "{{ vault_sat_admin_pwd }}" content-view add-repository --name={{content_view}} --organization={{sat_org}} --repository-id={{item.Id}}
+  loop:
+    "{{ JSON_ContentViews }}"

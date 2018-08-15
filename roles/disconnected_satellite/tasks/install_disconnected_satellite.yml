@@ -1,0 +1,4 @@
+---
+## Install Satellite Packages
+- name: Execute Disconnected Satellite Install Packages script
+  shell: /mnt/sat/install_packages

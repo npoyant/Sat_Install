@@ -1,0 +1,6 @@
+---
+- name: Add All Subscriptions to the Activation Key
+  command: hammer activation-key add-subscription --id "{{item[0].ID}}" --subscription-id "{{item[1].ID}}"
+  with_nested:
+    - "{{JSON_Activation_keys}}"
+    - "{{JSON_Subscriptions}}"

@@ -1,0 +1,5 @@
+---
+- name: Sync all repos in the Red Hat Enterprise Linux Server product
+  command: /usr/bin/hammer --password "{{ vault_sat_admin_pwd }}" product synchronize --organization "{{ sat_org }}" --async --name="{{item.Product}}"
+  with_items:
+    - "{{JSON_repository_list}}"
