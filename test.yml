@@ -1,0 +1,8 @@
+---
+- name: Satellite Install
+  hosts: satellite
+  become: true
+  gather_facts: yes
+  tasks:
+    - debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+    - debug: var=hostvars[inventory_hostname]['ansible_default_ipv6']['address']

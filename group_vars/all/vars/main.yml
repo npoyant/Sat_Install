@@ -9,8 +9,8 @@
 # vault_rhn_pool_name: "<your rhn_pool_name>"
 
 #Satellite Variables
-#vault_sat_admin_name: "sat_admin"
-#vault_sat_admin_pwd: "homesat123!"
+vault_sat_admin_name: "admin"
+vault_sat_admin_pwd: "redhat"
 
 ##  Variables used - must update per system
 new_disk: '/dev/vdb'     # set to 2nd disk
@@ -20,12 +20,12 @@ new_disk: '/dev/vdb'     # set to 2nd disk
 sat_org: My_Organization
 sat_location: My_Location
 activationkey: My_activation
-sat_domain: alliey.local
-subnet_gateway: 192.168.1.1
-subnet_netmask: 255.255.254.0
-subnet_name: "192.168.0.0/23"
-subnet_network:  192.168.0.0
-subnet_dns: 192.168.1.50
+sat_domain: example.com
+subnet_gateway: 192.168.56.1
+subnet_netmask: 255.255.255.0
+subnet_name: "192.168.56.0/24"
+subnet_network:  192.168.56.0
+subnet_dns: 192.168.56.50
 content_view: "Original_ContentView"
 host_collection_name: "RHEL_7_Hosts"
 
@@ -35,8 +35,8 @@ host_collection_name: "RHEL_7_Hosts"
 
 #Standard variables
 ## Common Variables
-register_SM: true
-enable_repos: true
+register_SM: false
+enable_repos: false
 
 
 #two variables used for skip sections for debugging

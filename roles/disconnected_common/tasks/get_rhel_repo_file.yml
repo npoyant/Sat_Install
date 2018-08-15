@@ -1,0 +1,6 @@
+---
+- name: Get RHEL 7 Server Repo File from Repo Server
+  get_url:
+    url: "http://satrepo.example.com/pub/rhel.repo"
+    dest: "/etc/yum.repos.d/"
+    mode: "444"

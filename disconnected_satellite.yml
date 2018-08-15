@@ -4,5 +4,5 @@
   become: true
   gather_facts: yes
   roles:
-    - common
-    - satellite
+    - disconnected_common
+#    - satellite

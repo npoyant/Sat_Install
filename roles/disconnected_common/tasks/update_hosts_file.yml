@@ -13,4 +13,6 @@
   lineinfile:
     create: yes
     dest: /etc/hosts
-    line: "{{ ansible_default_ipv4.address }}      {{ansible_fqdn}}   {{ansible_hostname}}  #SELF"
+    line: "{{ ansible_enp0s3.ipv4.address }}      {{ ansible_fqdn }}   {{ ansible_hostname }}  #SELF"
+
+#    line: "{{ansible_default_ipv4.address}}      {{ansible_fqdn}}   {{ansible_hostname}}  #SELF"

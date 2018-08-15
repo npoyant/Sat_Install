@@ -1,0 +1,8 @@
+---
+- name: add rhel 7 repo
+  yum_repository:
+    name: rhel_7_repo
+    description: RHEL 7 SERVER
+    baseurl: file:///repo2/rhel-7-server-rpms/
+    gpgcheck: no
+    enabled: yes

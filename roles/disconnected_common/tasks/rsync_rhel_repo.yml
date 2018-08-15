@@ -10,5 +10,5 @@
 - name: Synchronization using rsync protocol (pull)
   synchronize:
     mode: pull
-    src: rsync://satrepo.example.com/var/www/html/pub/rhel-7-server-rpms/
+    src: satrepo.example.com:/var/www/html/pub/rhel-7-server-rpms
     dest: /repo2/

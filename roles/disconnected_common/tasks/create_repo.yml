@@ -1,0 +1,3 @@
+---
+- name: Run "createrepo" command against rhel-7-server-rpms directory
+  shell: createrepo /repo2/rhel-7-server-rpms

@@ -1,0 +1,26 @@
+---
+- name: Ensure Repo Directory Exists
+  file:
+    path: /repo2
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+
+- name: Remove Content Tar if it already exists
+  file:
+    path: /repo2/rhel-7-server-rpms.tar
+    state: absent
+
+- name: Unarchive a file that needs to be downloaded (added in 2.0)
+  unarchive:
+    src: http://satrepo.example.com/pub/rhel-7-server-rpms.tar
+    dest: /repo2/
+    remote_src: yes
+
+#- name: Get Content from Repo Server
+#  get_url:
+#    url: "http://satrepo.example.com/pub/rhel-7-server-rpms.tar"
+#    dest: /repo2/
+#    mode: 750
+#    force: yes

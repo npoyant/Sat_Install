@@ -1,5 +1,8 @@
 [satellite]
-192.168.122.253   ansible_user=cloud-user
+192.168.56.102 ansible_host=satellite-ansible.example.com
 
 [common]
-10.10.10.10       ansible_user=cloud-user
+192.168.56.102 ansible_host=satellite-ansible.example.com
+
+[satrepo]
+satrepo.example.com
