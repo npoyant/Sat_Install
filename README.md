@@ -2,10 +2,10 @@
 
 Ansible playbooks to setup and configure Satellite 6.31   
 This playbook will perform the following steps:  
-  - Register to RHSM
+  - Register to RHSM or Setup disconnected environment
   - Install common packages and update the system
-  - Install Satellite 6.31
-  - Configure Satellite 6.31 with basic configurations
+  - Install Satellite 6.32
+  - Configure Satellite 6.32 with basic configurations
   
 usage:  
   - ansible-playbook -i inventory.txt satellite.yml
@@ -23,7 +23,9 @@ usage:
 
 # Roles:  
   common - used to setup all hosts / register with RHN  
-  satellite - Install and configure Satellite 6.3.1   
+  satellite - Install and configure Satellite 6.3.1 
+  disconnected_common 
+  disconnected_satellite 
 
 # Minimum System Requirements for roles:  
   - common = RHEL7.x with 20GB drive  
